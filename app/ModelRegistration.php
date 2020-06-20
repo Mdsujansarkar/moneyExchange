@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Model;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class FrontPage extends Model
+class ModelRegistration extends Model
 {
     //
 }

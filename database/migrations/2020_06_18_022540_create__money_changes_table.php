@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFrontPagesTable extends Migration
+class CreateMoneyChangesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class CreateFrontPagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('front_pages', function (Blueprint $table) {
-            $table->id();
+        Schema::create('money_changes', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('sendmoney');
+            $table->string('resive_money');
+            $table->float('enter_money',10,2);
+            $table->float('total_money',10,2);
             $table->timestamps();
         });
     }
@@ -26,6 +30,6 @@ class CreateFrontPagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('front_pages');
+        Schema::dropIfExists('money_changes');
     }
 }
