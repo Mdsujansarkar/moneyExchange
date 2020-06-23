@@ -16,13 +16,21 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/',						'FrontPageController@index')		->name('index');
-Route::get('/client/registration',	'FrontPageController@registration') ->name('registration');
+Route::get('/page/registration',	'FrontPageController@registration') ->name('registration');
 Route::get('/client/login',			'FrontPageController@login') 		->name('login');
 
-Route::post('/client/registration', 'FrontPageController@moneyChange')  ->name('money.change');
+Route::post('/page/registration', 	'FrontPageController@moneyChange')  ->name('money.change');
 
 /**
  * Registration controller
  */
-Route::post('/client/registration1',  'RegistrationController@index')->name('customer.registration');
+Route::post('/complite/registration','RegistrationController@index')->name('customer.registration');
 Route::post('/client/login',  		 'RegistrationController@login')->name('login.customer');
+Route::get('/confirm/order',		 'RegistrationController@confirmOrder')->name('confirm.order');
+Route::post('/confirm/thanks',		 'RegistrationController@confirm')->name('confirm');
+/**
+ * Backend code
+ */
+Route::get('order/change/{id}',		 'BackandController@orderChange')->name('view.order.change');
+Route::get('/backends/',			 'BackandController@index')		->name('index');
+Route::get('/complite/status',		 'BackandController@orderComplite')		->name('order.complite.status');

@@ -107,30 +107,12 @@
         </thead>
         <tbody>
             <tr>
+
                 <td>Tiger Nixon</td>
                 <td>System Architect</td>
                 <td>Edinburgh</td>
                 <td>61</td>
             </tr>
-            <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-            </tr>
-            <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-            </tr>
-            <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-            </tr>
-           
         </tbody>
     </table>
 </div>
@@ -144,86 +126,32 @@
 <div class="main-table">
   <div class="container">
     <div class="row">
-      <div class="col-md-6 mt-top">
-        <div class="card" style="width: 100%;">
-      <h4 class="text-center">Completed Exchanges</h4>
-      <table id="example1" border="1" class="display" style="width:100%">
-        <thead>
-            <tr>
-                <th>We Accept</th>
-                <th>We buy</th>
-                <th>We Sell</th>
-                <th>Available</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-            </tr>
-            <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-            </tr>
-            <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-            </tr>
-            <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-            </tr>
-           
-        </tbody>
-    </table>
-</div>
-      </div>
-      <div class="col-md-6 mt-top">
+ 
+      <div class="col-md-8 mt-top">
       <div class="card" style="width: 100%;">
       <h4 class="text-center">Pending Exchanges</h4>
       <table id="example2" border="1" class="display" style="width:100%">
         <thead>
             <tr>
-                <th>We Accept</th>
-                <th>We buy</th>
-                <th>We Sell</th>
-                <th>Available</th>
+                <th>Username</th>
+                <th>Send</th>
+                <th>Receive</th>
+                <th>Money Send</th>
+                <th>Amount</th>
+                <th>Status</th>
             </tr>
         </thead>
         <tbody>
+          @foreach($orders as $order)
             <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
+                <td>{{$order->user_name}}</td>
+                <td>{{$order->sendmoney}}</td>
+                <td>{{$order->resive_money}}</td>
+                <td>{{$order->enter_money}}</td>
+                <td>{{$order->total_money}}</td>
+                <td>{{$order->order_status}}</td>
+                @endforeach
             </tr>
-            <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-            </tr>
-            <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-            </tr>
-            <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-            </tr>
-           
         </tbody>
     </table>
 </div>

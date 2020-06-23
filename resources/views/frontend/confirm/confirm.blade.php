@@ -12,7 +12,6 @@
           </div>
         </div>
       </div>
-      
     </div>
   </header>
 <div class="main-registration">
@@ -20,34 +19,34 @@
     <div class="row">
       <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
         <div class="card card-signin my-5">
-          <h3>{{Session::get('message')}}</h3>
-           @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
           <div class="card-body">
-            <h5 class="card-title text-center">Login</h5>
-            <form class="form-signin" action="{{route('login.customer')}}" method="post">
-              @csrf
-              <div class="form-label-group">
-                <input type="email" name="email_address" class="form-control" placeholder="Email Address" required>
-              </div>
-              
-              <div class="form-label-group">
-                <input type="password" name="password" class="form-control" placeholder="password" required>
-              </div>
-
-              <div class="custom-control custom-checkbox mb-3">
-                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                <label class="custom-control-label" for="customCheck1">Remember password</label>
-              </div>
-              <button class="btn btn-lg btn-primary btn-block text-uppercase" name="btn" type="submit">Login</button>
-            </form>
+              <h1>Order Confarm</h1>
+               <table style="width:100%" border="1">
+                      <tr>
+                        <th>Firstname</th>
+                        <td>{{$customerId->f_name.' '.$customerId->l_name}}</td>
+                      </tr>
+                      <tr>
+                        <th>Phone Number</th>
+                        <td>{{$customerId->phone_number}}</td>
+                      </tr>
+                      <tr>
+                        <th>Phone Number</th>
+                        <td>{{$customerId->email_address}}</td>
+                      </tr>
+                      <tr>
+                        <th>User Name</th>
+                        <td>{{$customerId->user_name}}</td>
+                      </tr>
+                      <tr>
+                        <form action="{{route('confirm')}}" method="post">
+                          @csrf
+                        <th>Confarm</th>
+                        <td><button class="btn btn-lg btn-primary btn-block text-uppercase" name="btn" type="submit">Confirm</button></td>
+                        </form>
+                        
+                      </tr>
+                </table> 
           </div>
         </div>
       </div>
