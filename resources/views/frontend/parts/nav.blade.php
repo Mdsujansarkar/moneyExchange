@@ -13,7 +13,7 @@
             <a class="nav-link" href="{{route('registration')}}">Register</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('login')}}">Login</a>
+            <a class="nav-link" href="{{route('client.login')}}">Login</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
