@@ -1,6 +1,30 @@
 @extends('frontend.master')
 @section('home')
 <header>
+  <script>
+<!--
+function euroConverter(){
+document.converter.dollar.value = document.converter.euro.value * 1.470
+document.converter.pound.value = document.converter.euro.value * 0.717
+document.converter.yen.value = document.converter.euro.value * 165.192
+}
+function dollarConverter(){
+document.converter.euro.value = document.converter.dollar.value * 0.680
+document.converter.pound.value = document.converter.dollar.value * 0.488
+document.converter.yen.value = document.converter.dollar.value * 112.36
+}
+function poundConverter(){
+document.converter.dollar.value = document.converter.pound.value * 2.049
+document.converter.euro.value = document.converter.pound.value * 1.394
+document.converter.yen.value = document.converter.pound.value * 230.27
+}
+function yenConverter(){
+document.converter.dollar.value = document.converter.yen.value * 0.0089
+document.converter.pound.value = document.converter.yen.value * 0.00434
+document.converter.euro.value = document.converter.yen.value * 0.00605
+}
+//-->
+</script>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -154,6 +178,30 @@
             </tr>
         </tbody>
     </table>
+</div>
+      </div>
+        <div class="col-md-4 mt-top">
+      <div class="card" style="width: 100%;">
+      <h4 class="text-center">Pending Exchanges</h4>
+     <form name="converter">
+<table border="0">
+<tr>
+<td>Euro: </td><td><input type="text" name="euro" onChange="euroConverter()" /></td>
+</tr>
+<tr>
+<td>US Dollar: </td><td><input type="text" name="dollar" onChange="dollarConverter()" /></td>
+</tr>
+<tr>
+<td>British Pound:</td><td><input type="text" name="pound" onChange="poundConverter()" /></td>
+</tr>
+<tr>
+<td>Japanese Yen: </td><td><input type="text" name="yen" onChange="yenConverter()" /></td>
+</tr>
+<tr>
+<td colspan="2" align="center"><input type="button" value="Convert!" /></td>
+</tr>
+</table>
+</form>
 </div>
       </div>
 

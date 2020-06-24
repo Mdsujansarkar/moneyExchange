@@ -35,8 +35,12 @@ Route::group(['middleware' => ['exchange']], function () {
  * Backend code
  */
 Route::get('order/change/{id}',		 'BackandController@orderChange')->name('view.order.change');
+Route::get('order/unchange/{id}',	 'BackandController@orderUnChange')->name('view.order.unchange');
+Route::get('add/change',	 		 'BackandController@addChange')->name('add.change');
+Route::post('add/change/money',	 	 'BackandController@changeMoney')->name('add.money.change');
+Route::get('/change/manage',	 	 'BackandController@changeManage')->name('manage.change');
 
-Route::get('/complite/status',		 'BackandController@orderComplite')		->name('order.complite.status');
+// Route::get('/complite/status',		 'BackandController@orderComplite')		->name('order.complite.status');
 
 Route::get('/backends', 'HomeController@index')->name('home');
 });

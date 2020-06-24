@@ -20,17 +20,12 @@
   <link href="{{asset('backend/asset/css/elegant-icons-style.css')}}" rel="stylesheet" />
   <link href="{{asset('backend/asset/css/font-awesome.min.css')}}" rel="stylesheet" />
 
-  <!-- easy pie chart-->
-  <link href="{{asset('backend/asset/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css')}}" rel="stylesheet" type="text/css" media="screen" />
-  <!-- owl carousel -->
-  <link rel="stylesheet" href="{{asset('backend/asset/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css')}}" type="text/css">
   <link href="{{asset('backend/asset/css/jquery-jvectormap-1.2.2.css')}}" rel="stylesheet">
   <!-- Custom styles -->
   
   <link href="{{asset('backend/asset/css/widgets.css')}}" rel="stylesheet">
   <link href="{{asset('backend/asset/css/style.css')}}" rel="stylesheet">
   <link href="{{asset('backend/asset/css/style-responsive.css')}}" rel="stylesheet" />
-  <link href="{{asset('backend/asset/css/xcharts.min.css')}}" rel=" stylesheet">
   <link href="{{asset('backend/asset/css/jquery-ui-1.10.4.min.css')}}" rel="stylesheet">
   <!-- =======================================================
     Theme Name: NiceAdmin
@@ -87,7 +82,7 @@
   <script src="{{asset('backend/asset/js/jquery.js')}}"></script>
   <script src="{{asset('backend/asset/js/jquery-ui-1.10.4.min.js')}}"></script>
   <script src="{{asset('backend/asset/js/jquery-1.8.3.min.js')}}"></script>
-  <script type="text/javascript" src="{{asset('backend/asset/js/jquery-ui-1.9.2.custom.min.js')}}"></script>
+  <script src="{{asset('backend/asset/js/jquery-ui-1.9.2.custom.min.js')}}"></script>
   <!-- bootstrap -->
   <script src="{{asset('backend/asset/js/bootstrap.min.js')}}"></script>
   <!-- nice scroll -->
@@ -112,13 +107,11 @@
     <script src="{{asset('backend/asset/js/easy-pie-chart.js')}}"></script>
     <script src="{{asset('backend/asset/js/jquery-jvectormap-1.2.2.min.js')}}"></script>
     <script src="{{asset('backend/asset/js/jquery-jvectormap-world-mill-en.js')}}"></script>
-    <script src="{{asset('backend/asset/js/xcharts.min.js')}}"></script>
     <script src="{{asset('backend/asset/js/jquery.autosize.min.js')}}"></script>
     <script src="{{asset('backend/asset/js/jquery.placeholder.min.js')}}"></script>
     <script src="{{asset('backend/asset/js/gdp-data.js')}}"></script>
     <script src="{{asset('backend/asset/js/morris.min.js')}}"></script>
     <script src="{{asset('backend/asset/js/sparklines.js')}}"></script>
-    <script src="{{asset('backend/asset/js/charts.js')}}"></script>
     <script src="{{asset('backend/asset/js/jquery.slimscroll.min.js')}}"></script>
     <script>
       //knob

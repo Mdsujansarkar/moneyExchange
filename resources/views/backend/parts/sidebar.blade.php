@@ -15,7 +15,7 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="{{route('order.complite.status')}}">Order Complite</a></li>
+              {{-- <li><a class="" href="{{route('order.complite.status')}}">Order Complite</a></li> --}}
               <li><a class="" href="form_validation.html">Form Validation</a></li>
             </ul>
           </li>
@@ -24,11 +24,12 @@
           <li class="sub-menu">
             <a href="javascript:;" class="">
                           <i class="icon_documents_alt"></i>
-                          <span>Pages</span>
+                          <span>Change Money</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="profile.html">Profile</a></li>
+              <li><a class="" href="{{route('add.change')}}">Add Change</a></li>
+              <li><a class="" href="{{route('manage.change')}}">Change Manage</a></li>
             </ul>
           </li>
 

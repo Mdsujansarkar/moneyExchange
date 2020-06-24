@@ -37,10 +37,11 @@
       <td>{{$order->customer_id}}</td>
       <td>{{$order->order_status}}</td>
       <td>
-        <a href="{{route('view.order.change',['id'=>$order->id])}}" style="padding:3px; background-color:green;color:#FFF" title="edit"><i class="fa fa-edit"></i></a>
-        <a href="" style="padding:3px; background-color:green;color:#FFF" title="Delete"><i class="fa fa-eraser"></i></a>
-        <a href="" style="padding:3px; background-color:green;color:#FFF" title="Complite"><i class="fa fa-long-arrow-up"></i></a>
-        <a href="" style="padding:3px; background-color:green;color:#FFF" title="panding"><i class="fa fa-long-arrow-down"></i></a>
+        <a href="{{route('view.order.change',['id'=>$order->id])}}" style="padding:3px; background-color:green;color:#FFF" title="Complite"><i class="fa fa-long-arrow-up"></i></a>
+        <a href="{{route('view.order.unchange',['id'=>$order->id])}}" style="padding:3px; background-color:green;color:#FFF" title="panding"><i class="fa fa-long-arrow-down"></i></a>
+       {{--  <a href="" style="padding:3px; background-color:green;color:#FFF" title="Delete"><i class="fa fa-eraser"></i></a>
+        <a href="" style="padding:3px; background-color:green;color:#FFF" title="Complite"><i class="fa fa-long-arrow-up"></i></a> --}}
+        
       </td>
     </tr>
     @endforeach
