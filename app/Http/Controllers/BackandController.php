@@ -28,6 +28,7 @@ class BackandController extends Controller
     	$order->save();
     	return redirect( '/backends' )    ->with( 'message', 'Unpublish' );
     }
+
      public function orderUnChange($id)
     {
     	$order = Order::find($id);
@@ -35,10 +36,12 @@ class BackandController extends Controller
     	$order->save();
     	return redirect( '/backends' )    ->with( 'message', 'Unpublish' );
     }
+
     public function addChange()
     {
     	return view('backend.change.change');
     }
+
     public function changeMoney(Request $request)
     {
     	$moneyChange = new AddChange();
@@ -48,11 +51,54 @@ class BackandController extends Controller
     	$moneyChange ->addchange_availavel 			= $request->addchange_availavel;
     	$moneyChange ->publication_status 			= $request->publication_status;
     	$moneyChange ->save();
+
     	return redirect('/add/change')->with('message','Add successfully');
     }
+
     public function changeManage()
     {
-    	return view('backend.change.manage');
+    	$moneyChanges = AddChange::all();
+
+    	return view('backend.change.manage',['moneyChanges' =>$moneyChanges]);
+    }
+
+    public function changeUnpublish($id)
+    {
+    	$changePublish = AddChange::find($id);
+    	$changePublish->publication_status = 0;
+    	$changePublish->save();
+    	return redirect('/change/manage')->with('message','Add successfully');
+    }
+
+    public function changePublish($id)
+    {
+    	$changePublish = AddChange::find($id);
+    	$changePublish->publication_status = 1;
+    	$changePublish->save();
+    	return redirect('/change/manage')->with('message','Add successfully');
+    }  
+    public function changeEdit($id)
+    {
+    	$changePublish = AddChange::find($id);
+    	return view('backend.change.edit',['changePublish' =>$changePublish]);
+    }
+    public function changeUpdate(Request $request)
+    {
+    	$changePublish = AddChange::find($request->change_id);
+    	$changePublish -> addchange_accept = $request->addchange_accept;
+    	$changePublish -> addchange_buy = $request->addchange_buy;
+    	$changePublish -> addchange_sell = $request->addchange_sell;
+    	$changePublish -> addchange_availavel = $request->addchange_availavel;
+    	$changePublish -> publication_status = $request->publication_status;
+    	$changePublish -> save();
+    	return redirect('/change/manage')->with('message','Update successfully');
+
+    }
+    public function changeDelete($id)
+    {
+    	$changePublish = AddChange::find($id);
+    	$changePublish ->delete();
+    	return redirect('/change/manage')->with('message','Update successfully');
     }
   
 }

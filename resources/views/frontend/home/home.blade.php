@@ -130,13 +130,15 @@ document.converter.euro.value = document.converter.yen.value * 0.00605
             </tr>
         </thead>
         <tbody>
-            <tr>
-
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
+            
+              @foreach($changesMoneyAccounts as $changesMoneyAccount)
+              <tr>
+                <td>{{$changesMoneyAccount ->addchange_accept}}</td>
+                <td>{{$changesMoneyAccount ->addchange_buy}}</td>
+                <td>{{$changesMoneyAccount ->addchange_sell}}</td>
+                <td>{{$changesMoneyAccount ->addchange_availavel}}</td>
             </tr>
+            @endforeach
         </tbody>
     </table>
 </div>

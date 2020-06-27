@@ -3,7 +3,7 @@
         <!-- sidebar menu start-->
         <ul class="sidebar-menu">
           <li class="active">
-            <a class="" href="index.html">
+            <a class="" href="{{url('/backends')}}">
                           <i class="icon_house_alt"></i>
                           <span>Dashboard</span>
                       </a>
@@ -16,7 +16,6 @@
                       </a>
             <ul class="sub">
               {{-- <li><a class="" href="{{route('order.complite.status')}}">Order Complite</a></li> --}}
-              <li><a class="" href="form_validation.html">Form Validation</a></li>
             </ul>
           </li>
     
